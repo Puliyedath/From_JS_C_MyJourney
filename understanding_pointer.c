@@ -1,24 +1,23 @@
-// understanding pointers in c
-
 #include <stdio.h>
-#include <stdint.h>
+#include <stdlib.h>
 
 int main()
 {
-  const int limit = 500; 
-  const int *pci ;
-  int test = 20;
+  int str_len(char *s);
+  //malloc returns a pointer to the memory location in heading
+  int *pi = (int *)malloc(sizeof (int));
+  printf("the length of the string is %d \n", str_len("hareesh"));
+  return 0;
+}
 
-  pci  = &limit ;
+int str_len(char *s)
+{
+  int i = 0 ;
+  //calculates the length of the string
+  while(s[++i] != '\0' )
+    {
 
-  pci = &test;
-  
+    }
 
-
-
-  char *brothers[] = {"hareesh", "aneesh", "ajeesh"};
-  char **firstBrother[] = { &brothers[1], &brothers[2] };
-  printf("first brother is %s\n", *firstBrother[0]);
-
-  return 0 ;
+  return i ;
 }
